@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">TP01</string>
     <string name="trader_s_name">Trader\'s name</string>
+    <string name="open">Open</string>
+    <string name="reload">Reload</string>
+    <string name="upload">Upload</string>
 </resources>
