@@ -43,53 +43,51 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cdvMainElements"
-        android:layout_width="match_parent"
+        android:id="@+id/cdvElements"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
         app:cardCornerRadius="10dp"
-        app:cardElevation="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPreferencesName"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/tilPreferencesName">
 
-        <include layout="@layout/item_ressources_info" />
+        <include
+            android:id="@+id/incElements"
+            layout="@layout/item_ressources_info" />
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnOpen"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="@string/open"
         android:drawableLeft="@drawable/baseline_door_sliding_24"
         android:drawableTint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2" />
+        android:text="@string/open"
+        app:layout_constraintBottom_toTopOf="@+id/btnReload"
+        app:layout_constraintEnd_toEndOf="@+id/btnReload"
+        app:layout_constraintStart_toStartOf="@+id/btnReload" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnReload"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="@string/reload"
         android:drawableLeft="@drawable/baseline_cached_24"
         android:drawableTint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="@+id/button3"/>
+        android:text="@string/reload"
+        app:layout_constraintBottom_toTopOf="@+id/btnUplaod"
+        app:layout_constraintEnd_toEndOf="@+id/btnUplaod"
+        app:layout_constraintStart_toStartOf="@+id/btnUplaod" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnUplaod"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="@string/upload"
         android:drawableLeft="@drawable/baseline_upload_24"
         android:drawableTint="@color/white"
+        android:text="@string/upload"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

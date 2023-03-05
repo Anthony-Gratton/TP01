@@ -21,7 +21,7 @@ class TraderRepository(private val context: Context) {
         val QUANTITY_ELEMENT_VE = floatPreferencesKey("element_VE")
     }
 
-    val TraderData = context.dataStore.data.map {
+    val traderData = context.dataStore.data.map {
         val name = it[TraderKeys.USERNAME] ?: ""
         val ewhyx = it[TraderKeys.QUANTITY_ELEMENT_EX] ?: 200F
         val wusnyx = it[TraderKeys.QUANTITY_ELEMENT_WU] ?: 200F
