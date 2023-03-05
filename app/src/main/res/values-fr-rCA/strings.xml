@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TP01</string>
-    <string name="trader_s_name">Trader\'s name</string>
+    <string name="trader_s_name">Nom de commerçant</string>
+    <string name="open">Ouvrir</string>
+    <string name="reload">Chargement</string>
+    <string name="upload">Téléverser</string>
+    <string name="delivery">Livraison</string>
+    <string name="ewhyx">Ewhyx</string>
+    <string name="wusnyx">Wusnyx</string>
+    <string name="iaspyx">Iaspyx</string>
+    <string name="smiathil">Smiathil</string>
+    <string name="vethyx">Vethyx</string>
+    <string name="welcome_message">Bon retour</string>
+    <string name="delivery_content">La livraison doit contenir au moins une fraction d\'un élément</string>
+    <string name="name_missing">Le nom du commercant ne peut pas être vide</string>
+    <string name="upload_consortium">Vos livraisons ont été transmise au Consortium</string>
+    <string name="delivery_saved">Votre nouvelle livraison à été sauvegardé</string>
 </resources>

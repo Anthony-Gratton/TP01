@@ -35,11 +35,11 @@ class DeliveriesRecyclerViewAdapter(var deliveries : List<Delivery>): RecyclerVi
 
         fun bind(delivery: Delivery) {
 
-            binding.txtElementEx.text = delivery.ewhyx.toString()
-            binding.txtElementWu.text = delivery.wusnyx.toString()
-            binding.txtElementI.text = delivery.iaspyx.toString()
-            binding.txtElementSm.text = delivery.smiathil.toString()
-            binding.txtElementVe.text = delivery.vathyx.toString()
+            binding.txtElementEx.text = String.format("%.2f", delivery.ewhyx)
+            binding.txtElementWu.text = String.format("%.2f", delivery.wusnyx)
+            binding.txtElementI.text = String.format("%.2f", delivery.iaspyx)
+            binding.txtElementSm.text = String.format("%.2f", delivery.smiathil)
+            binding.txtElementVe.text = String.format("%.2f", delivery.vathyx)
 
         }
 

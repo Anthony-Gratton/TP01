@@ -5,4 +5,14 @@
     <string name="reload">Reload</string>
     <string name="upload">Upload</string>
     <string name="delivery">Delivery</string>
+    <string name="ewhyx">Ewhyx</string>
+    <string name="wusnyx">Wusnyx</string>
+    <string name="iaspyx">Iaspyx</string>
+    <string name="smiathil">Smiathil</string>
+    <string name="vethyx">Vethyx</string>
+    <string name="welcome_message">Welcome Back</string>
+    <string name="delivery_content">The delivery must contain at least a fraction of an element</string>
+    <string name="name_missing">The trader\'s name cannot be empty</string>
+    <string name="upload_consortium">Your deliveries have been transferred to the Consortium</string>
+    <string name="delivery_saved">Your new delivery has been saved</string>
 </resources>

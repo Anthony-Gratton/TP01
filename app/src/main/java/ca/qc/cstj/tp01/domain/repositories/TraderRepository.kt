@@ -32,14 +32,14 @@ class TraderRepository(private val context: Context) {
     }
 
 
-    suspend fun save(name: String, element_EX:Float, element_WU:Float, element_I:Float,element_SM:Float,element_VE:Float) {
+    suspend fun save(trader: Trader) {
         context.dataStore.edit {
-            it[TraderKeys.USERNAME] = name
-            it[TraderKeys.QUANTITY_ELEMENT_EX] = element_EX
-            it[TraderKeys.QUANTITY_ELEMENT_WU] = element_WU
-            it[TraderKeys.QUANTITY_ELEMENT_I] =element_I
-            it[TraderKeys.QUANTITY_ELEMENT_SM] = element_SM
-            it[TraderKeys.QUANTITY_ELEMENT_VE] = element_VE
+            it[TraderKeys.USERNAME] = trader.name
+            it[TraderKeys.QUANTITY_ELEMENT_EX] = trader.ewhyx
+            it[TraderKeys.QUANTITY_ELEMENT_WU] = trader.wusnyx
+            it[TraderKeys.QUANTITY_ELEMENT_I] =trader.iaspyx
+            it[TraderKeys.QUANTITY_ELEMENT_SM] = trader.smiathil
+            it[TraderKeys.QUANTITY_ELEMENT_VE] = trader.vathyx
         }
     }
 

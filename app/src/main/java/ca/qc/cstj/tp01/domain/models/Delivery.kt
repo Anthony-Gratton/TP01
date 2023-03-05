@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 data class Delivery(
 
     @PrimaryKey(autoGenerate = true)
-    var idDelivery : Int,
+    var idDelivery : Int = 0,
 
     var ewhyx: Float = 0F,
     var wusnyx:Float = 0F,

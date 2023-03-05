@@ -7,12 +7,14 @@ import ca.qc.cstj.tp01.domain.repositories.TraderRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import androidx.lifecycle.viewModelScope
+import ca.qc.cstj.tp01.core.AppDatabase
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 class HomeViewModel(application: Application) : AndroidViewModel(application)  {
     private val traderRepository = TraderRepository(application)
+    private val deliveriesRepository = AppDatabase.getInstance(application).DeliveryRepository()
 
     private val _mainUiState = MutableStateFlow<HomeUIState>(HomeUIState.Empty)
     val mainUiState = _mainUiState.asStateFlow()
@@ -36,9 +38,9 @@ class HomeViewModel(application: Application) : AndroidViewModel(application)  {
         }
     }
 
-    fun saveTrader(trader: Trader){
+    private fun saveTrader(trader: Trader){
         viewModelScope.launch {
-            traderRepository.save(trader.name, trader.ewhyx, trader.wusnyx, trader.iaspyx, trader.smiathil, trader.vathyx)
+            traderRepository.save(trader)
         }
     }
 
@@ -53,7 +55,13 @@ class HomeViewModel(application: Application) : AndroidViewModel(application)  {
         }
     }
 
-    fun upload(){
+     fun upload(){
+        viewModelScope.launch{
+            deliveriesRepository.deleteAll()
+            _mainUiState.update {
+                return@update HomeUIState.DeleteSuccess
+            }
+        }
 
     }
 
